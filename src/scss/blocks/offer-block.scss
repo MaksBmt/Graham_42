@@ -1,0 +1,17 @@
+.offer-block {
+  min-width: 300px;
+  padding: 20px 10px;
+
+  border: 1px solid $default;
+  border-radius: 20px;
+  box-sizing: border-box;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    color: $default;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,48 @@
+@mixin min-max($min-width, $max-width) {
+  min-width: $min-width;
+  max-width: $max-width;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@mixin list-reset($padding-left: 0) {
+  margin: 0;
+  padding-left: $padding-left;
+  list-style: none;
+}
+
+@mixin link-reset($text-decoration: none) {
+  text-decoration: $text-decoration;
+  cursor: pointer;
+}
+
+@mixin button() {
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  box-shadow: none;
+  appearance: none;
+  border: none;
+}
+
+@mixin font($font-size: 14px, $line-height: 18px) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  $result: calc($pixels / $context);
+  @return $result + 0em;
+}
+
+@mixin padding-left-right-mobile(){
+  padding-left: em(20);
+  padding-right: em(20);
+}
+
+@mixin padding-link-header() {
+  padding-top: em(20);
+  padding-bottom: em(20);
+}

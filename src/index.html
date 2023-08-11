@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title":"Главная"
+})
+
+<body>
+  <div class="overlay"></div>
+  @@include('html/header.html',{})
+  <main>
+    <section class="promo">
+      <div class="promo__wrap wrap">
+        <h1 class="promo__title title title--h1">Разработка сайтов любых типов</h1>
+        <ul class="promo__list offer-block">
+          <li class="promo__item">
+            <a href="" class="promo__link link-to-details" title="смотреть подробности">
+              <div class="promo__wrapper">
+                <span class="promo__text">Сайт визитка</span>
+                <span class="promo__price">8 000 <span class="promo__currency">руб</span></span>
+              </div>
+              <span class="promo__svg link-to-details__svg">
+                <svg class="promo__img" width="30" height="20">
+                  <use xlink:href="img/icons/icons.svg#arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="promo__item">
+            <a href="" class="promo__link link-to-details" title="смотреть подробности">
+              <div class="promo__wrapper">
+                <span class="promo__text">Сайт компании</span>
+                <span class="promo__price">15 000 <span class="promo__currency">руб</span></span>
+              </div>
+              <span class="promo__svg link-to-details__svg">
+                <svg class="promo__img" width="30" height="20">
+                  <use xlink:href="img/icons/icons.svg#arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="promo__item">
+            <a href="" class="promo__link link-to-details" title="смотреть подробности">
+              <div class="promo__wrapper">
+                <span class="promo__text">Интернет магазин</span>
+                <span class="promo__price">28 000 <span class="promo__currency">руб</span></span>
+              </div>
+              <span class="promo__svg link-to-details__svg">
+                <svg class="promo__img" width="30" height="20">
+                  <use xlink:href="img/icons/icons.svg#arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <article class="promo__offer-block offer-block">
+          <h2 class="offer-block__title title title--h2">Оплата после результата</h2>
+          <p class="offer-block__text text">Мы не берем аванс. Вы получаете готовый сайт и только потом оплачиваете его.
+          </p>
+          <a href="" class="link-to-details link-to-details--special" title="узнать подробности">
+            <span class="link-to-details__text">Подробности</span>
+            <span class="promo__svg link-to-details__svg">
+              <svg class="promo__img" width="30" height="20">
+                <use xlink:href="img/icons/icons.svg#arrow"></use>
+              </svg>
+            </span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="process__wrap wrap">
+        <h2 class="process__title title title--h2 title--grey">Как мы работаем</h2>
+        <ul class="process__list">
+          <li class="process__item">
+            <p class="process__text">Связываемся и обсуждаем</p>
+            <svg class="process__img process__img--phone">
+              <use xlink:href="img/icons/icons.svg#phone"></use>
+            </svg>
+          </li>
+          <li class="process__item">
+            <p class="process__text">Предлагаем несколько вариантов
+            </p>
+            <svg class="process__img process__img--note">
+              <use xlink:href="img/icons/icons.svg#note"></use>
+            </svg>
+          </li>
+          <li class="process__item">
+            <p class="process__text">Заключаем договор</p>
+            <svg class="process__img process__img--text">
+              <use xlink:href="img/icons/icons.svg#text"></use>
+            </svg>
+          </li>
+          <li class="process__item">
+            <p class="process__text">Делаем верстку</p>
+            <svg class="process__img process__img--monitor">
+              <use xlink:href="img/icons/icons.svg#monitor"></use>
+            </svg>
+          </li>
+          <li class="process__item">
+            <p class="process__text">Подключаем cms</p>
+            <svg class="process__img process__img--cms">
+              <use xlink:href="img/icons/icons.svg#cms"></use>
+            </svg>
+          </li>
+          <li class="process__item">
+            <p class="process__text">Наполняем информацией</p>
+            <svg class="process__img process__img--filling">
+              <use xlink:href="img/icons/icons.svg#filling"></use>
+            </svg>
+          </li>
+          <li class="process__item">
+            <p class="process__text">Представляем готовый сайт</p>
+            <svg class="process__img process__img--site">
+              <use xlink:href="img/icons/icons.svg#site"></use>
+            </svg>
+          </li>
+          <li class="process__item">
+            <p class="process__text">Вы оплачиваете</p>
+            <svg class="process__img process__img--dollar">
+              <use xlink:href="img/icons/icons.svg#dollar"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+
+  @@include('html/footer.html',{})
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

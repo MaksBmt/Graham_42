@@ -1,0 +1,123 @@
+.nav__list {
+  padding-top: 50px;
+  padding-left: 14px;
+  padding-right: 5px;
+
+  @media (min-width: $md) {
+    display: flex;
+    justify-content: space-around;
+    // flex-grow: 1;
+    padding: 0;
+  }
+}
+
+.nav__item {
+  @media (min-width: $md) {
+    flex-grow: 1;
+  }
+}
+
+.nav__link {
+  @include font(16px, 20px);
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media (min-width: $md) {
+    text-align: center;
+  }
+}
+
+.nav__button {
+  position: relative;
+  width: 30px;
+  height: 26px;
+  background-color: inherit;
+  display: none;
+
+  @media (max-width: $md-1) {
+    @include button();
+    outline: none;
+  }
+}
+
+.nav {
+  position: relative;
+  @media (min-width: $md) {
+    flex-grow: 1;
+  }
+
+  @media (max-width: $md-1) {
+    &--closed {
+      .nav__button {
+        &::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 30px;
+          height: 4px;
+          background-color: $white;
+          box-shadow: 0 10px 0 0 $white;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 20px;
+          right: 0;
+          width: 18px;
+          height: 4px;
+          background-color: $white;
+        }
+      }
+
+      .nav__list {
+        display: none;
+      }
+    }
+
+    &--opened {
+      .nav__button {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 13px;
+          right: 4px;
+          width: 36px;
+          height: 3px;
+          box-shadow: none;
+          z-index: 5;
+          transform: rotate(45deg);
+          background-color: #201f1f;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 13px;
+          right: 4px;
+          width: 36px;
+          height: 3px;
+          z-index: 5;
+          transform: rotate(-45deg);
+          background-color: #201f1f;
+        }
+      }
+
+      .nav__wrapper {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        z-index: 4;
+
+        min-width: 250px;
+        background-color: #fff;
+      }
+
+      .nav__list {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.link-to-details {
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+
+  &:hover {
+    box-shadow: 0 2px 5px rgba(286,286,286,0.5), 0 4px 6px rgba(0,0,0,0.2);
+  }
+
+  &--special {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 180px;
+    padding: 5px 15px;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    font-family: FiraSans;
+    font-weight: 500;
+    font-size: 18px;
+    color: $primary;
+  }
+}
