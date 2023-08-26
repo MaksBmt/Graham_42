@@ -1,0 +1,202 @@
+.benefit {
+    background-image: url('../img/map.png');
+    background-color: #272733;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+
+
+    &__wrap {
+        @include padding-left-right-mobile();
+        padding-top: 50px;
+        padding-bottom: 40px;
+
+        @media (min-width: $lg) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__caption {
+        margin-bottom: 30px;
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+            position: absolute;
+            top: -2px;
+            left: 20px;
+            width: 25px;
+            height: 25px;
+            content: '';
+
+            background-position: center;
+            background-size: cover;
+            z-index: 5;
+
+            @media(min-width: $md) {
+                width: 50px;
+                height: 50px;
+                top: 60px;
+                left: 60px;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: -6px;
+            left: 15px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: $blue-common;
+
+            @media(min-width: $md) {
+                top: 50px;
+                left: 50px;
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        &--adaptiv {
+            &::before {
+                background-image: url('../img/resize.svg');
+            }
+        }
+
+        &--seo {
+            &::before {
+                background-image: url('../img/seo.svg');
+            }
+        }
+
+        &--menedger {
+            &::before {
+                background-image: url('../img/menedger.svg');
+            }
+        }
+    }
+
+    &__list {
+        &--menedger {
+            margin-top: 10px;
+            padding-left: 50px;
+        }
+
+        @media(min-width: $md) {
+            padding-right: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        @media (min-width: $lg) {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+
+            @media(min-width: $md) {
+                margin-bottom: 50px;
+            }
+        }
+
+        &--menedger:not(:last-child) {
+            margin-bottom: 10px;
+
+            @media(min-width: $md) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &--menedger {
+            position: relative;
+
+            @media(min-width: $md) {
+                font-size: 20px;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: -2px;
+                left: -15px;
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                @media(min-width: $md) {
+                    top: -5px;
+                    left: 85px;
+                    width: 40px;
+                    height: 40px
+                }
+            }
+        }
+
+        &--picture {
+
+            &::before {
+                background-image: url('../img/picture.svg');
+            }
+        }
+
+        &--text {
+            &::before {
+                background-image: url('../img/text.svg');
+                width: 14px;
+                height: 14px;
+                left: -11px;
+                top: 2px;
+            }
+        }
+
+        &--news {
+
+            &::before {
+                background-image: url('../img/news.svg');
+                width: 14px;
+                height: 14px;
+                left: -11px;
+                top: 2px;
+            }
+        }
+
+        &--goods {
+
+            &::before {
+                background-image: url('../img/goods.svg');
+                width: 14px;
+                height: 14px;
+                left: -11px;
+                top: 2px;
+            }
+        }
+    }
+
+    &__text {
+        color: $default;
+        line-height: 1.2;
+        font-size: 16px;
+
+        @media (min-width: $md) {
+            padding-left: 150px;
+
+            &--menedger {
+                font-size: 20px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

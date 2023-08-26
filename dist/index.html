@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
 </head>
 
 <body>
@@ -14,7 +17,7 @@
   <header class="header header--fix">
   <div class="header__wrap wrap">
     <a href="/" class="header__link header__link--logo">
-      <p class="header__logo-text">Грэм 42</p>
+      <p class="logo-text">Грэм 42</p>
     </a>
 
     <button class="header__btn btn-make-request">Сделать заявку</button>
@@ -32,10 +35,13 @@
             <a href="" class="nav__link">Контакты</a>
           </li>
           <li class="nav__item">
-            <a href="" class="nav__link">Как оплатить</a>
+            <a href="" class="nav__link">Стоимость</a>
           </li>
           <li class="nav__item">
-            <a href="" class="nav__link">Склад</a>
+            <a href="" class="nav__link">Блог</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link">Акции</a>
           </li>
         </ul>
       </div>
@@ -44,7 +50,6 @@
   </div>
 
 </header>
-
   <main>
     <section class="promo">
       <div class="promo__wrap wrap">
@@ -56,10 +61,10 @@
                 <span class="promo__text">Сайт визитка</span>
                 <span class="promo__price">8 000 <span class="promo__currency">руб</span></span>
               </div>
-                <span class="promo__svg link-to-details__svg">
-                  <svg class="promo__img" width="30" height="20">
-                    <use xlink:href="img/icons/icons.svg#arrow"></use>
-                  </svg>
+              <span class="promo__svg link-to-details__svg">
+                <svg class="promo__img" width="30" height="20">
+                  <use xlink:href="img/icons/icons.svg#arrow"></use>
+                </svg>
               </span>
             </a>
           </li>
@@ -70,9 +75,9 @@
                 <span class="promo__price">15 000 <span class="promo__currency">руб</span></span>
               </div>
               <span class="promo__svg link-to-details__svg">
-                  <svg class="promo__img" width="30" height="20">
-                    <use xlink:href="img/icons/icons.svg#arrow"></use>
-                  </svg>
+                <svg class="promo__img" width="30" height="20">
+                  <use xlink:href="img/icons/icons.svg#arrow"></use>
+                </svg>
               </span>
             </a>
           </li>
@@ -83,23 +88,24 @@
                 <span class="promo__price">28 000 <span class="promo__currency">руб</span></span>
               </div>
               <span class="promo__svg link-to-details__svg">
-                  <svg class="promo__img" width="30" height="20">
-                    <use xlink:href="img/icons/icons.svg#arrow"></use>
-                  </svg>
+                <svg class="promo__img" width="30" height="20">
+                  <use xlink:href="img/icons/icons.svg#arrow"></use>
+                </svg>
               </span>
             </a>
           </li>
         </ul>
         <article class="promo__offer-block offer-block">
           <h2 class="offer-block__title title title--h2">Оплата после результата</h2>
-          <p class="offer-block__text text">Мы не берем аванс. Вы получаете готовый сайт и только потом оплачиваете его.</p>
+          <p class="offer-block__text text">Мы не берем аванс. Вы получаете готовый сайт и только потом оплачиваете его.
+          </p>
           <a href="" class="link-to-details link-to-details--special" title="узнать подробности">
-              <span class="link-to-details__text">Подробности</span>
-               <span class="promo__svg link-to-details__svg">
-                  <svg class="promo__img" width="30" height="20">
-                    <use xlink:href="img/icons/icons.svg#arrow"></use>
-                  </svg>
-              </span>
+            <span class="link-to-details__text">Подробности</span>
+            <span class="promo__svg link-to-details__svg">
+              <svg class="promo__img" width="30" height="20">
+                <use xlink:href="img/icons/icons.svg#arrow"></use>
+              </svg>
+            </span>
           </a>
         </article>
       </div>
@@ -161,32 +167,197 @@
         </ul>
       </div>
     </section>
+    <section class="benefit">
+      <div class="benefit__wrap wrap">
+        <h2 class="benefit__title title title--h2">Что получаете</h2>
+        <ul class="benefit__list offer-block">
+          <li class="benefit__item">
+            <h3 class="benefit__caption benefit__caption--adaptiv title title--h3">Адаптивный сайт</h3>
+            <p class="benefit__text text text--justify">Ваш сайт одинаково хорошо смотрится на всех типах устройств и
+              при любой ширене
+              экрана: на мобильных, на планшетах и на больших мониторах.</p>
+          </li>
+          <li class="benefit__item">
+            <h3 class="benefit__caption benefit__caption--seo title title--h3">Готовый к продвижению</h3>
+            <p class="benefit__text text text--justify">Сайт сделан с учетом требований поисковых систем. Он готов к
+              дальнейшему
+              продвижению.</p>
+          </li>
+          <li class="benefit__item">
+            <h3 class="benefit__caption benefit__caption--menedger title title--h3">Простое управление</h3>
+            <p class="benefit__text benefit__text--menedger text">Вы сами сможете работать с сайтом:
+            <ul class="benefit__list benefit__list--menedger">
+              <li class="benefit__item benefit__item--menedger benefit__item--picture benefit__text text">
+                Загружайте картинки
+              </li>
+              <li class="benefit__item benefit__item--menedger benefit__item--text benefit__text text">
+                Меняйте тексты
+              </li>
+              <li class="benefit__item benefit__item--menedger benefit__item--news benefit__text text">
+                Делитесь новостями
+              </li>
+              <li class="benefit__item benefit__item--menedger benefit__item--goods benefit__text text text--justify">
+                Добавляйте новые товары
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__wrap wrap">
+        <div class="advantages__title title title--h2 title--grey">Наши преймущества</div>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--up">
+            <p class="advantages__text">80% наших клиентов приходят по рекомендации</p>
+          </li>
+          <li class="advantages__item advantages__item--approved">
+            <p class="advantages__text">9 лет безупречной работы</p>
+          </li>
+          <li class="advantages__item advantages__item--web">
+            <p class="advantages__text">Сотни сделанных сайтов</p>
+          </li>
+          <li class="advantages__item advantages__item--graphics">
+            <p class="advantages__text">Конкурентные цены</p>
+          </li>
+          <li class="advantages__item advantages__item--donation">
+            <p class="advantages__text">Оплата после результата</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="working">
+      <div class="working__wrap wrap">
+        <h2 class="working__title title title--h2">Примеры работ</h2>
+        <ul class="working__list">
+          <li class="working__item">
+            <a class="working__link" title="подробности" data-fancybox href="img/hair_dread_all.jpeg">
+              <div class="working__wrapper-img">
+                <picture><source srcset="img/hair-dred.webp" type="image/webp"><img src="img/hair-dred.png" alt="" loading="lazy" class="working__img"></picture>
+              </div>
+              <!-- <p class="working__description">Салон дредов в Махачкале</p> -->
+            </a>
+          </li>
+          <li class="working__item">
+            <a class="working__link" title="подробности" data-fancybox href="img/fashion_store.no-logo.jpeg">
+              <div class="working__wrapper-img">
+                <picture><source srcset="img/fasion-shop.webp" type="image/webp"><img src="img/fasion-shop.png" alt="" loading="lazy" class="working__img"></picture>
+              </div>
+              <!-- <p class="working__description">Магазин модной одежды</p> -->
+            </a>
+          </li>
+          <li class="working__item">
+            <a class="working__link" title="подробности" data-fancybox href="img/breads_full.jpeg">
+              <div class="working__wrapper-img">
+                <picture><source srcset="img/breads.webp" type="image/webp"><img src="img/breads.png" alt="" loading="lazy" class="working__img"></picture>
+              </div>
+              <!-- <p class="working__description">Пекарня бутик</p> -->
+            </a>
+          </li>
+          <li class="working__item">
+            <a class="working__link" title="подробности" data-fancybox href="img/travel_full.jpeg">
+              <div class="working__wrapper-img">
+                <picture><source srcset="img/travel.webp" type="image/webp"><img src="img/travel.png" alt="" loading="lazy" class="working__img"></picture>
+              </div>
+              <!-- <p class="working__description">Пекарня бутик</p> -->
+            </a>
+          </li>
+          <li class="working__item">
+            <a class="working__link" title="подробности" data-fancybox href="img/needle-full.png">
+              <div class="working__wrapper-img">
+                <picture><source srcset="img/needle.webp" type="image/webp"><img src="img/needle.png" alt="" loading="lazy" class="working__img"></picture>
+              </div>
+              <!-- <p class="working__description">Пекарня бутик</p> -->
+            </a>
+          </li>
+          <li class="working__item">
+            <a class="working__link" title="подробности" data-fancybox href="img/tdpsm.ru-full.png">
+              <div class="working__wrapper-img">
+                <picture><source srcset="img/tdpsm.webp" type="image/webp"><img src="img/tdpsm.png" alt="" loading="lazy" class="working__img"></picture>
+              </div>
+              <!-- <p class="working__description">Пекарня бутик</p> -->
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <footer>
-  <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul>
-  <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul>
-  <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul>
-</footer>
 
+  <footer class="footer">
+  <div class="footer__wrap wrap">
+    <div class="footer__block footer__block--logo">
+      <a href="/" class="footer__link footer__link--logo">
+        <p class="logo-text logo-text--footer">Грэм 42</p>
+      </a>
+      <div class="footer__wrapper">
+        <span class="text footer__text">18+</span>
+        <span class="footer__copy">&#169;</span>
+        <span class="text footer__text">2015 - 2023</span>
+      </div>
+    </div>
+    <div class="footer__block footer__block--contact">
+      <a href="tel:+7(812)6605917" class="footer__link footer__link--phone">+7(812) 660 59 17</a>
+      <p class="footer__contact footer__text">Санкт-Петербург, ул. Чапаева д. 9, лит. А</p>
+    </div>
+    <div class="footer__block">
+      <div class="footer__wrapper footer__wrapper--flex">
+        <h3 class="footer__title title title--grey">Мы в соц. сетях:</h3>
+        <ul class="footer__messengers messengers">
+          <li class="messengers__item">
+            <a href="" class="messengers__link">
+              <svg class="messengers__img" width="30" height="30">
+                <use xlink:href="img/icons/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="messengers__item">
+            <a href="" class="messengers__link">
+              <svg class="messengers__img" width="30" height="30">
+                <use xlink:href="img/icons/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="messengers__item">
+            <a href="" class="messengers__link">
+              <svg class="messengers__img" width="30" height="30">
+                <use xlink:href="img/icons/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrapper footer__wrapper--flex">
+        <h3 class="footer__title title title--grey">Раскажите всем:</h3>
+        <ul class="footer__widget widget">
+          <li class="widget__item">
+            <a href="" class="widget__link" utm_source="messengers" data-utm_medium="fb" data-type="fb">
+              <svg class="widget__img" width="20" height="20">
+                <use xlink:href="img/icons/icons.svg#facebook"></use>
+              </svg>
+              <span class="widget__text">Поделиться</span>
+            </a>
+          </li>
+          <li class="widget__item">
+            <a href="" class="widget__link" utm_source="messengers" data-utm_medium="twitter" data-type="twitter">
+              <svg class="widget__img" width="20" height="20">
+                <use xlink:href="img/icons/icons.svg#twitter"></use>
+              </svg>
+              <span class="widget__text">Поделиться</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__block footer__block--contact">
+      <a href="" class="footer__link footer__link--page">Контакты</a>
+      <a href="" class="footer__link footer__link--page">Карта сайта</a>
+      <a href="" class="footer__link footer__link--page">Политика конфиденциальности</a>
+    </div>
+
+  </div>
+</footer>
   <script src="js/app.min.js"></script>
 </body>
 

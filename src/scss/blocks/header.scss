@@ -23,18 +23,16 @@
   &--logo {
     @media (min-width: $md) {
       width: 50%;
+      padding-bottom: 5px;
     }
   }
 }
 
-.header__logo-text {
-  text-transform: uppercase;
-  font-size: 26px;
-  font-family: FiraSans;
-  font-weight: 900;
-  color: $white;
+.header__nav {
+  @media (min-width: $md) {
+    width: 100%;
+  }
 }
-
 
 //.header__user {
 //  @media (min-width: $md) {
@@ -45,19 +43,27 @@
 .header__scroll {
   background-color: $default;
   animation: color-header 1s;
+  // animation: color-nav-button 1s;
 
-  .header__logo-text {
+  .logo-text {
     color: $color-text;
+  }
+
+  .nav__link {
+    color: $color-text;
+
+    &:hover {
+      color: $primary;
+    }
   }
 }
 
 @keyframes color-header {
   from {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
   }
+
   to {
     background-color: $default;
   }
 }
-
-

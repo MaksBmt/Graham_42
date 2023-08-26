@@ -2,6 +2,15 @@
   min-width: 300px;
   padding: 20px 10px;
 
+  @media (min-width: $md) {
+    min-width: 500px;
+  }
+
+  @media (min-width: $lg) {
+    padding: 40px;
+    min-width: 600px;
+  }
+
   border: 1px solid $default;
   border-radius: 20px;
   box-sizing: border-box;
@@ -13,5 +22,9 @@
   &__text {
     color: $default;
     margin-bottom: 20px;
+
+    @media (min-width: $lg) {
+      font-size: 26px;
+    }
   }
 }

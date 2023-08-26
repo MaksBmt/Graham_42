@@ -13,7 +13,7 @@
 
 .nav__item {
   @media (min-width: $md) {
-    flex-grow: 1;
+    // flex-grow: 1;
   }
 }
 
@@ -22,9 +22,24 @@
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-family: FiraSans-Regular;
+  color: $bg-common;
+
+  &:hover {
+    color: $default;
+  }
 
   @media (min-width: $md) {
-    text-align: center;
+    padding-bottom: 15px;
+    font-family: FiraSans;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+
+  @media (min-width: $lg) {
+    font-size: 24px;
+    // text-align: center;
   }
 }
 
@@ -43,6 +58,7 @@
 
 .nav {
   position: relative;
+
   @media (min-width: $md) {
     flex-grow: 1;
   }
@@ -117,6 +133,53 @@
 
       .nav__list {
         display: block;
+      }
+    }
+  }
+}
+
+@keyframes color-nav-button-background {
+  from {
+    background-color: $white;
+  }
+
+  to {
+    background-color: rgba(35, 35, 35, .7);
+  }
+}
+
+@keyframes color-nav-button-shadow {
+  from {
+    box-shadow: 0 10px 0 0 $white;
+  }
+
+  to {
+    box-shadow: 0 10px 0 0 rgba(35, 35, 35, .7);
+  }
+}
+
+.header__scroll {
+  .nav {
+    @media (max-width: $md-1) {
+      &--closed {
+        .nav__button {
+          &::before {
+
+            // background-color: $white;
+            // box-shadow: 0 10px 0 0 $white;
+            background-color: rgba(35, 35, 35, .7);
+            box-shadow: 0 10px 0 0 rgba(35, 35, 35, .7);
+            animation: color-nav-button-background 1s;
+            animation: color-nav-button-shadow 1s;
+          }
+
+          &::after {
+
+            // background-color: $white;
+            background-color: rgba(35, 35, 35, .7);
+            animation: color-nav-button-background 1s;
+          }
+        }
       }
     }
   }

@@ -1,0 +1,25 @@
+.messengers {
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+    &__link {
+        &:hover {
+            .messengers__img {
+                fill: $bg-common;
+            }
+        }
+    }
+
+    &__img {
+        fill: $color-text;
+        width: 20px;
+    }
+}

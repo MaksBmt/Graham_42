@@ -17,10 +17,24 @@ const swiper = new Swiper();
 
 ///**********************======================== */
 
+
+// ? ---------------------------------------------------------
 import OpenMenu from "./openMenu.js";
 import OpenPopup from "./openPopup.js";
 import { correctPaddingTop } from "./modules/functions.js"
-import { EvalDevToolModulePlugin } from "webpack";
+import JSShare from "js-share";
+
+
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
+
+const shareItems = document.querySelectorAll('.widget__link');
+for (var i = 0; i < shareItems.length; i += 1) {
+  shareItems[i].addEventListener('click', function share(e) {
+    return JSShare.go(this);
+  });
+}
 
 if (document.querySelector('.nav') !== null) {
   const nav = document.querySelector('.nav');
@@ -60,40 +74,40 @@ if (document.querySelector('header') !== null) {
 
 
 
-if (document.querySelector('.process__list') !== null) {
-  const parentElement = document.querySelector('.process__list');
-  const list = parentElement.querySelectorAll('.process__item');
+// if (document.querySelector('.process__list') !== null) {
+//   const parentElement = document.querySelector('.process__list');
+//   const list = parentElement.querySelectorAll('.process__item');
 
-  //можно ли создать блок после элемента
-  const widthParentElement = parentElement.offsetWidth;
+//   //можно ли создать блок после элемента
+//   const widthParentElement = parentElement.offsetWidth;
 
-  const widthItem = list[0].offsetWidth;
-  const leftItem = list[1].offsetLeft;
-  const rightItem = widthParentElement - widthItem - leftItem;
-  if (rightItem > widthItem) {
-    console.log('ok')
-  }
+//   const widthItem = list[0].offsetWidth;
+//   const leftItem = list[1].offsetLeft;
+//   const rightItem = widthParentElement - widthItem - leftItem;
+//   if (rightItem > widthItem) {
+//     console.log('ok')
+//   }
 
-  function setAllTopItems(list) {
-    const resultArr = [];
-    const resultObj = {};
-    Array.from(list).map((item) => {
-      resultArr.push(item.offsetTop)
-    });
-    const resultSet = new Set(resultArr);
+//   function setAllTopItems(list) {
+//     const resultArr = [];
+//     const resultObj = {};
+//     Array.from(list).map((item) => {
+//       resultArr.push(item.offsetTop)
+//     });
+//     const resultSet = new Set(resultArr);
 
 
-    resultSet.forEach((i, index) => {
+//     resultSet.forEach((i, index) => {
 
-      resultObj[resultSet[index]] = (Array.from(list).filter(top => top.offsetTop === i).length);
-      // resultObj.i = index
-    });
+//       resultObj[resultSet[index]] = (Array.from(list).filter(top => top.offsetTop === i).length);
+//       // resultObj.i = index
+//     });
 
-    return resultObj;
-  }
+//     return resultObj;
+//   }
 
-  console.log(setAllTopItems(list));
+//   console.log(setAllTopItems(list));
 
-}
+// }
 
 

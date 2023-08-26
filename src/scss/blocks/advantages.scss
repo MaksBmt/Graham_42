@@ -1,0 +1,115 @@
+.advantages {
+    background-image: url('../img/fon-0101.jpg');
+    background-position: center;
+    background-size: cover;
+
+    &__wrap {
+        @include padding-left-right-mobile();
+        padding-top: 50px;
+        padding-bottom: 40px;
+
+        @media (min-width: $lg) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        @media (min-width: $md) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (min-width: $lg) {
+            max-width: 1020px;
+            margin: 0 auto;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 120px;
+        padding-left: 130px;
+
+        @media (min-width: $md) {
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+
+            border-radius: 50%;
+            border: 5px solid $blue-border;
+            background-color: $blue-common;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 50px;
+            top: 0;
+            left: 30px;
+            transform: translateY(50%);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        &--up {
+            &::after {
+                background-image: url('../img/up.svg');
+            }
+        }
+
+        &--approved {
+            &::after {
+                background-image: url('../img/appruved.svg');
+            }
+        }
+
+        &--web {
+            &::after {
+                background-image: url('../img/web.svg');
+                top: 5px;
+            }
+        }
+
+        &--graphics {
+            &::after {
+                background-image: url('../img/graphics.svg');
+            }
+        }
+
+        &--donation {
+            &::after {
+                background-image: url('../img/donation.svg');
+            }
+        }
+    }
+
+    &__text {
+        @media (min-width: $lg) {
+            font-size: 20px;
+            font-family: FiraSans-Regular;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.footer {
+    background-image: url('../img/fon-0101.jpg');
+    background-position: center;
+    background-size: cover;
+
+    &__wrap {
+        @include padding-left-right-mobile();
+        padding-top: 50px;
+        padding-bottom: 40px;
+
+        @media (min-width: $md) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+        }
+
+        @media (min-width: $lg) {
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__block {
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: $md) {
+
+            &--contact {
+                margin-left: auto;
+            }
+
+            &--logo {
+                width: 50%;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            &:nth-child(-n+2) {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (min-width: $lg) {
+            &--logo {
+                width: auto;
+            }
+
+            &--contact {
+                margin-left: 0;
+
+                &:nth-child(-n+2) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        @media (min-width: $md) {
+
+            &--flex {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+
+        @media (min-width: $md) {
+            text-align: end;
+        }
+
+        &--logo {
+            margin-bottom: 5px;
+
+            @media (min-width: $md) {
+                text-align: start;
+            }
+        }
+
+        &--phone {
+            margin-bottom: 5px;
+            font-size: 15px;
+            color: $color-title;
+        }
+
+        &--page {
+            font-size: 15px;
+            line-height: 20px;
+            color: $color-title;
+        }
+    }
+
+    &__text {
+        padding-left: 0px;
+        font-size: 15px;
+    }
+
+    &__title {
+        font-size: 15px;
+        text-transform: lowercase;
+        font-weight: 500;
+        margin-bottom: 10px;
+        text-align: left;
+
+        @media (min-width: $md) {
+            margin-bottom: 0;
+        }
+    }
+}

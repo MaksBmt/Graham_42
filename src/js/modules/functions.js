@@ -20,6 +20,7 @@ export function isWebp() {
 //   document.querySelector('main').style.marginTop = headerHeight + 'px';
 // }
 export function correctPaddingTop(selector) {
-  const headerHeight = document.querySelector('header').offsetHeight;
+  const headerHeight = document.querySelector('.header--fix').offsetHeight;
+
   document.querySelector(selector).style.paddingTop = headerHeight + 'px';
 }

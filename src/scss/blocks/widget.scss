@@ -1,0 +1,43 @@
+.widget {
+    padding: 0 15px;
+    padding-top: 10px;
+
+    @media (min-width: $md) {
+        display: flex;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
+        @media (min-width: $md) {
+            // margin-bottom: 0;
+
+            &:not(:last-child) {
+                margin-right: 15px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__link {
+        padding: 5px 10px;
+        background-color: $primary;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: $hover-button;
+        }
+    }
+
+    &__img {
+        height: 15px;
+        fill: $default;
+    }
+
+    &__text {
+        font-size: 15px;
+        color: $bg-common;
+    }
+}

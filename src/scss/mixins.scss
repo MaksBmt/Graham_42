@@ -34,12 +34,22 @@ $browser-context: 16; // Default
 
 @function em($pixels, $context: $browser-context) {
   $result: calc($pixels / $context);
-  @return $result + 0em;
+  @return ($result)+0em;
 }
 
-@mixin padding-left-right-mobile(){
+@mixin padding-left-right-mobile() {
   padding-left: em(20);
   padding-right: em(20);
+
+  @media(min-width: $md) {
+    padding-left: em(30);
+    padding-right: em(30);
+  }
+
+  @media(min-width: $lg) {
+    padding-left: em(50);
+    padding-right: em(50);
+  }
 }
 
 @mixin padding-link-header() {

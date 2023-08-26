@@ -3,6 +3,10 @@
   background-position: center;
   background-size: cover;
 
+  @media (min-width: $lg) {
+    background-image: url('../img/ext_top.webp');
+  }
+
   &__wrap {
     @include padding-left-right-mobile();
     display: flex;
@@ -10,49 +14,59 @@
     align-items: center;
     padding-top: 50px;
     padding-bottom: 40px;
+
+    @media (min-width: $lg) {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
   }
 
   &__title {
     margin-bottom: 40px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 80px;
+    }
   }
 
   &__list {
-    //min-width: 300px;
-    //padding: 20px 10px;
     margin-bottom: 40px;
-    //border: 1px solid $default;
-    //border-radius: 20px;
-    //box-sizing: border-box;
+
+    @media (min-width: $lg) {
+      margin-bottom: 60px;
+    }
   }
 
   &__item {
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 15px;
     }
   }
 
-  //&__link {
-  //  padding: 5px 10px;
-  //  display: flex;
-  //  flex-direction: column;
-  //  border-radius: 20px;
-  //
-  //  &:hover {
-  //    box-shadow: 0 2px 5px rgba(286,286,286,0.5), 0 4px 6px rgba(0,0,0,0.2);
-  //  }
-  //}
+  &__link {
+    @media (min-width: $md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 5px;
     }
 
     &--center {
       justify-content: center;
+    }
+
+    @media (min-width: $md) {
+      flex-grow: 2;
+      margin-bottom: 0;
     }
   }
 
@@ -60,6 +74,11 @@
     color: $default;
     font-family: FiraSans;
     font-weight: 500;
+    font-size: 16px;
+
+    @media (min-width: $lg) {
+      font-size: 26px;
+    }
   }
 
   &__price {
@@ -67,10 +86,14 @@
     font-size: 22px;
     font-family: FiraSans;
     font-weight: 500;
+
+    @media (min-width: $lg) {
+      font-size: 26px;
+    }
   }
 
   &__currency {
-    font-size:18px;
+    font-size: 18px;
   }
 
   &__img {
@@ -82,7 +105,11 @@
   &__svg {
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    @media (min-width: $md) {
+      flex-grow: 1;
+      justify-content: end;
+    }
   }
 }
-
-
