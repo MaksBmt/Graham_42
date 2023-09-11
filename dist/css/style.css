@@ -675,6 +675,11 @@ a {
   fill: rgba(35, 35, 35, 0.7);
 }
 
+.process__img--phone {
+  -webkit-animation: change_fill 1s;
+          animation: change_fill 1s;
+}
+
 .process__text {
   color: rgba(35, 35, 35, 0.7);
   font-family: FiraSans;

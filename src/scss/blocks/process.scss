@@ -61,6 +61,10 @@
     transform: translateX(-50%);
 
     fill: $color-text;
+
+    &--phone {
+      animation: change_fill 1s;
+    }
   }
 
   &__text {
