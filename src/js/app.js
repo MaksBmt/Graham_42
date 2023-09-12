@@ -23,6 +23,7 @@ import OpenMenu from "./openMenu.js";
 import OpenPopup from "./openPopup.js";
 import { correctPaddingTop } from "./modules/functions.js"
 import JSShare from "js-share";
+import anime from 'animejs/lib/anime.es.js';
 
 
 Fancybox.bind("[data-fancybox]", {
@@ -71,6 +72,34 @@ if (document.querySelector('header') !== null) {
     }
   });
 }
+
+const firstImagePaths = document.querySelectorAll('.first path');
+const secondImagePaths = document.querySelectorAll('.second path');
+const thirdImagePaths = document.querySelectorAll('.third path');
+
+const timeline = anime.timeline({
+  duration: 3000,
+  easing: 'easeInOutExpo'
+});
+
+timeline.add({
+  targets: firstImagePaths,
+  strokeDashoffset: [anime.setDashoffset, 0],
+  delay: anime.stagger(300)
+});
+
+timeline.add({
+  targets: secondImagePaths,
+  strokeDashoffset: [anime.setDashoffset, 0]
+}, '-=2500');
+
+timeline.add({
+  targets: thirdImagePaths,
+  strokeDashoffset: [anime.setDashoffset, 0]
+});
+
+
+
 
 
 
