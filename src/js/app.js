@@ -23,6 +23,7 @@ import OpenMenu from "./openMenu.js";
 import OpenPopup from "./openPopup.js";
 import { correctPaddingTop } from "./modules/functions.js"
 import JSShare from "js-share";
+import { gsap } from "gsap";
 
 
 Fancybox.bind("[data-fancybox]", {
@@ -71,6 +72,23 @@ if (document.querySelector('header') !== null) {
     }
   });
 }
+
+//! ====== GSAP =================
+
+gsap.to(".box", {
+  x: 200,
+  background: 'orange',
+  duration: 1, //*длительность
+  delay: .5,  //*задержка
+  repeat: 2,  //*кол-во повторений
+  repeatDelay: 0.5,  //*задержка между повторениями
+  stagger: 0.3, //*задержка старта между элементами
+  onComplete: function () {
+    // alert('test')
+    console.log('test');
+
+  }
+});
 
 
 

@@ -35,9 +35,11 @@ const mainTask = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, 
 
 //Построение задач выполнения сценариев
 const dev = gulp.series(reset, mainTask, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTask);
 
 // Экспорт сценариев
 export { svgSpriteTask }
+export { build }
 
 //выполнение сценария по умолчанию
 gulp.task('default', dev);
