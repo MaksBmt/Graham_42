@@ -75,19 +75,31 @@ if (document.querySelector('header') !== null) {
 
 //! ====== GSAP =================
 
-gsap.to(".box", {
-  x: 200,
-  background: 'orange',
-  duration: 1, //*длительность
-  delay: .5,  //*задержка
-  repeat: 2,  //*кол-во повторений
-  repeatDelay: 0.5,  //*задержка между повторениями
-  stagger: 0.3, //*задержка старта между элементами
-  onComplete: function () {
-    // alert('test')
-    console.log('test');
+const showMyObj = (selector, obj) => {
+  const el = document.querySelector(selector);
+  el.innerHTML = JSON.stringify({
+    subscr: Math.ceil(obj.subscr),
+    sponsor: Math.ceil(obj.sponsor),
+    delta: obj.delta,
+    color: obj.color,
+  }, null, ' ');
+}
 
-  }
+const myObj = {
+  subscr: 1000,
+  sponsor: 42,
+  delta: .5,
+  color: '#123456',
+}
+
+gsap.to(myObj, {
+  subscr: 7000,
+  sponsor: 588,
+  delta: .5,
+  color: '#654321',
+  duration: 7,
+  delay: 0.5,
+  onUpdate: function () { showMyObj('.box', myObj) }
 });
 
 
