@@ -92,17 +92,38 @@ const myObj = {
   color: '#123456',
 }
 
-gsap.to(myObj, {
-  subscr: 7000,
-  sponsor: 588,
-  delta: .5,
-  color: '#654321',
-  duration: 7,
+// gsap.to(myObj, {
+//   subscr: 7000,
+//   sponsor: 588,
+//   delta: .5,
+//   color: '#654321',
+//   duration: 7,
+//   delay: 0.5,
+//   onUpdate: function () { showMyObj('.box', myObj) }
+// });
+
+//! === createElement =========
+const main = document.querySelector('main');
+const section = document.createElement('section');
+section.className = 'create';
+
+const row = document.createElement('div');
+row.className = 'row';
+
+const box = document.createElement('div');
+box.className = 'box';
+
+main.appendChild(section);
+section.appendChild(row);
+row.appendChild(box);
+
+gsap.to('.box', {
+  x: 350,
+  rotate: 180,
   delay: 0.5,
-  onUpdate: function () { showMyObj('.box', myObj) }
+  duration: 7,
+  ease: "back.out(1.7)",
 });
-
-
 
 // if (document.querySelector('.process__list') !== null) {
 //   const parentElement = document.querySelector('.process__list');
