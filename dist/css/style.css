@@ -108,6 +108,48 @@ a {
   cursor: pointer;
 }
 
+:root {
+  --transition: 0.155s ease-in;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button-kute {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #2a2a2a;
+  color: #2a2a2a;
+  -webkit-transition: border-color var(--transition);
+  transition: border-color var(--transition);
+  cursor: pointer;
+}
+
+.button-kute:hover {
+  border-color: #e58000;
+  color: #e58000;
+}
+
+.button-kute svg {
+  -webkit-transition: color var(--transition);
+  transition: color var(--transition);
+}
+
 .wrap {
   min-width: 375px;
   max-width: 1920px;

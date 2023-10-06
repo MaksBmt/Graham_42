@@ -14,7 +14,8 @@
 	"license": "ISC",
 	"dependencies": {
 		"gulp-cli": "^2.3.0",
-		"js-share": "^2.3.2"
+		"js-share": "^2.3.2",
+		"kute.js": "^2.2.4"
 	},
 	"devDependencies": {
 		"browser-sync": "^2.28.3",

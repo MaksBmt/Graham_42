@@ -23,6 +23,7 @@ import OpenMenu from "./openMenu.js";
 import OpenPopup from "./openPopup.js";
 import { correctPaddingTop } from "./modules/functions.js"
 import JSShare from "js-share";
+import KUTE from 'kute.js';
 
 
 Fancybox.bind("[data-fancybox]", {
@@ -72,6 +73,44 @@ if (document.querySelector('header') !== null) {
   });
 }
 
+//!=== kutejs ==================
+
+const button = document.querySelector('.button-kute');
+const path = button.querySelector('svg path');
+let isPressed = true;
+const PATHS = {
+  TICK: 'M9 8L14.5 2.5L13 1L11 3L7.5 6.5L5.5 8.5L3 6L2.5 6.5L1.5 7.5L5.5 11.5L9 8Z',
+  STAR: 'M6 6L8 2L10 6L14 6.5L11 9.5L12 14L8 12L4 14L5 9.5L2 6.5L6 6Z'
+}
+
+const tweenToTick = KUTE.to('.button-svg',
+  {
+    path: PATHS.TICK
+  },
+  {
+    duration: 350
+  }
+);
+
+const tweenToStar = KUTE.to('.button-svg',
+  {
+    path: PATHS.STAR
+  },
+  {
+    duration: 350
+  }
+)
+
+button.addEventListener('click', () => {
+  isPressed = !isPressed;
+
+  if (isPressed) {
+    tweenToStar.start();
+    return;
+  }
+
+  tweenToTick.start();
+})
 
 
 // if (document.querySelector('.process__list') !== null) {
